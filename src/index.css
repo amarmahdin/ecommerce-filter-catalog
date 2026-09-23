@@ -1,0 +1,69 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "DM Sans", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Instrument Serif", Georgia, serif;
+  --color-ink: #0f1419;
+  --color-ink-muted: #5c6670;
+  --color-surface: #f7f5f2;
+  --color-surface-raised: #ffffff;
+  --color-border: #e4dfd8;
+  --color-accent: #1a6b4a;
+  --color-accent-hover: #145539;
+  --color-accent-soft: #e8f3ed;
+  --color-warm: #c45c26;
+  --color-star: #d4a017;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  min-height: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-sans);
+  color: var(--color-ink);
+  background:
+    radial-gradient(ellipse 80% 50% at 10% -10%, #e8f3ed 0%, transparent 55%),
+    radial-gradient(ellipse 60% 40% at 100% 0%, #f3ebe3 0%, transparent 50%),
+    var(--color-surface);
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Range input styling */
+input[type="range"] {
+  -webkit-appearance: none;
+  appearance: none;
+  height: 6px;
+  border-radius: 999px;
+  background: var(--color-border);
+  outline: none;
+}
+
+input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background: var(--color-accent);
+  cursor: pointer;
+  border: 2px solid white;
+  box-shadow: 0 1px 4px rgb(0 0 0 / 0.15);
+}
+
+input[type="range"]::-moz-range-thumb {
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background: var(--color-accent);
+  cursor: pointer;
+  border: 2px solid white;
+  box-shadow: 0 1px 4px rgb(0 0 0 / 0.15);
+}
